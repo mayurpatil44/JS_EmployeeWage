@@ -34,3 +34,30 @@ switch(checkForEmployeePresence)
 }
 let employeeWage= WAGE_PER_HOUR*emp_hours;
 console.log("empWage : "+employeeWage);
+//UC3-Refractor UC2 to Write Functions
+{
+    console.log("UC3-Refractor UC2 to Write Functions");  
+    const IS_Full_TIME=2;
+    const IS_PART_TIME=1;
+    const Full_TIME_HRS=8;
+    const PART_TIME_HRS=4;
+    const WAGE_PER_HOUR=20;
+    function getWorkingHrs(empCheck)
+    {
+        switch(empCheck)
+        {
+            case 1:       
+                return PART_TIME_HRS;
+                
+            case 2:      
+                 return Full_TIME_HRS;           
+            default:
+                return 0;        
+    
+        }
+    }
+    let empCheck= Math.floor((Math.random()*10)%3);
+    let empHrs=getWorkingHrs(empCheck);
+    let employeeWage= WAGE_PER_HOUR*emp_hours;
+    console.log("empWage For UC3: "+employeeWage);
+}
