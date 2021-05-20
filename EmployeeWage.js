@@ -61,3 +61,16 @@ console.log("empWage : "+employeeWage);
     let employeeWage= WAGE_PER_HOUR*emp_hours;
     console.log("empWage For UC3: "+employeeWage);
 }
+//UC4-Calculating Wage For a month 
+const NUM_OF_WORKING_DAYS=20;
+let totalWorkinghrs=0;
+for(let day=0;day<=NUM_OF_WORKING_DAYS;day++)
+{
+    let empCheck= Math.floor((Math.random()*10)%3);
+    empHrs=getWorkingHrs(empCheck); 
+    totalWorkinghrs+=empHrs
+    console.log(totalWorkinghrs);      
+}
+employeeWage= totalWorkinghrs*WAGE_PER_HOUR;
+console.log("EmployeeWage for month UC4 : "+ employeeWage);
+}
